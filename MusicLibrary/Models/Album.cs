@@ -16,6 +16,6 @@ namespace MusicLibrary.Models
             public int RunTime { get; set; }
             public int GenreID { get; set; }
            // public virtual Genre Genre { get; set; }
-           // public virtual List<Song> Songs { get; set; }
+           //public virtual List<Song> Songs { get; set; }
     }
 }
