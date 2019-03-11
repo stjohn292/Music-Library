@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MusicLibrary.Models.Album>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Styles/Main.css" />
+    <link rel="stylesheet" href="~/Styles/HomeIndex.css" />
+</head>
+<body>
+
+    <!-- NavBar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="/Home">HOME</a></li>
+            <li><a href="/Category">GENRES</a></li>
+            <li><a href="/Movie">ALBUMS</a></li>
+
+
+        </ul>
+    </nav>
+
+
+    <!-- Section: Albums -->
+    <div class="album-list">
+        <div class="header-link-container">
+            <div class="album-list-header">
+                <h1>Albums</h1>
+            </div>
+            <div class="genre-link">
+
+                <a href="../Genre/Index">Sort by Genre</a>
+            </div>
+        </div>
+        <div class="albums-container">
+            <ul>
+                @foreach (var album in Model)
+                {
+                    <li>
+                        <div class="album-container">
+                            <img id="image" src="@album.ImgPath" />
+                            <a href="/Album/Details/@album.AlbumID">@album.AlbumName</a>
+                            <p>
+                                @album.ReleaseYear <br>
+                            </p>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <a href="/Album/Create" />Add a New Album>
+
+</body>
+</html>
