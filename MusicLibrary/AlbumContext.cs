@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using MusicLibrary.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace MusicLibrary.wwwroot
+namespace MusicLibrary
 {
     public class AlbumContext : DbContext
     {

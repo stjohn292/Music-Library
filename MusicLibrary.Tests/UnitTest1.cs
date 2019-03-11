@@ -1,8 +1,8 @@
-/*using MusicLibrary.Controllers;
+using MusicLibrary.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
-namespace DisneyMovieReviewSite.Tests
+namespace MusicLibrary.Tests
 {
     public class HomeControllerTests
     {
@@ -16,4 +16,3 @@ namespace DisneyMovieReviewSite.Tests
         }
     }
 }
-*/
