@@ -21,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Views\Album\Details.html" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="AlbumContext.cs" />
   </ItemGroup>
 

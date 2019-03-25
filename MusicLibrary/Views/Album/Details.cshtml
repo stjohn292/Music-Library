@@ -1,5 +1,34 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model MusicLibrary.Models.Album
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    Layout = null;
 }
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Styles/Main.css" />
+    <link rel="stylesheet" href="~/Styles/Details.css" />
+</head>
+<body>
+
+    <!-- NavBar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="/Home">HOME</a></li>
+            <li><a href="/Album">ALBUMS</a></li>
+
+
+        </ul>
+    </nav>
+
+    @Model.AlbumName
+    @Model.ArtistName
+
+    @foreach (var song in Model.Songs)
+    {<p> @song.SongName</p>}
+
+</body>
+</html>

@@ -12,6 +12,6 @@ namespace MusicLibrary.Models
             public string ArtistName { get; set; }
             public string ImgPath { get; set; }
             public int ReleaseYear { get; set; }
-           //public virtual List<Song> Songs { get; set; }
+           public virtual List<Song> Songs { get; set; }
     }
 }
