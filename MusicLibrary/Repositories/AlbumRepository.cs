@@ -26,23 +26,6 @@ namespace MusicLibrary.Repositories
             return db.Albums.ToList();
         }
 
-        public void Create(Album album)
-        {
-            db.Albums.Add(album);
-            db.SaveChanges();
-        }
-        public void Delete(Album album)
-        {
-            db.Albums.Remove(album);
-            db.SaveChanges();
-        }
-
-        public void Edit(Album album)
-        {
-            db.Update(album);
-            db.SaveChanges();
-        }
-
         public Album GetById(int id)
         {
             throw new NotImplementedException();

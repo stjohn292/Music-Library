@@ -10,8 +10,6 @@ namespace MusicLibrary.Repositories
     {
         IEnumerable<Album> GetAll();
         Album GetByID(int id);
-        void Create(Album album);
-        void Delete(Album album);
-        void Edit(Album album);
+        
     }
 }

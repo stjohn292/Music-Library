@@ -30,47 +30,6 @@ namespace MusicLibrary.Controllers
             return View(model);
         }
 
-        [HttpGet]
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Create(Album album)
-        {
-            albumRepo.Create(album);
-            return RedirectToAction("Index");
-        }
-
-        [HttpGet]
-        public ViewResult Delete(int id)
-        {
-            var model = albumRepo.GetByID(id);
-            return View(model);
-        }
-
-        [HttpPost]
-        public ActionResult Delete(Album album)
-        {
-
-            albumRepo.Delete(album);
-            return RedirectToAction("Index");
-        }
-
-
-        [HttpGet]
-        public ViewResult Edit(int id)
-        {
-            var model = albumRepo.GetByID(id);
-            return View(model);
-        }
-
-        [HttpPost]
-        public ActionResult Edit(Album album)
-        {
-            albumRepo.Edit(album);
-            return RedirectToAction("Details/" + album.AlbumID);
-        }
+        
     }
 }
